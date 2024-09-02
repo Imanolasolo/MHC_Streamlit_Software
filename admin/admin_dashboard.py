@@ -13,12 +13,6 @@ def admin_dashboard():
     st.sidebar.header("Manejo Roles")
     role_task = st.sidebar.selectbox("Seleccione tarea de rol", ["Crear Rol", "Lista de roles", "Editar rol", "Borrar rol"])
 
-    # Botón para abrir la aplicación de calendario
-    if st.sidebar.button("Gestión Quirófano"):
-        # Ejecutar la aplicación calendar.py en un nuevo proceso
-        subprocess.Popen(["streamlit", "run", "Modules/Calendar/calendar_quirofano.py"], cwd=os.getcwd())
-        st.write("**La aplicación de gestión de quirófanos se ha abierto en una nueva ventana.**")
-
     st.sidebar.write("---")
 
     if user_task == "Crear usuario":
