@@ -136,7 +136,7 @@ def main():
             # Botón para cambiar de usuario
             if st.sidebar.button('Cambio usuario', key='switch_user_button'):
                 st.session_state.clear()  # Limpiar la sesión
-                st.experimental_rerun()
+                st.rerun()
             
             # Mostrar dashboard según el rol
             if role_name == 'admin':
